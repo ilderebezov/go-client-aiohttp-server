@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  aiohttp-server:
+    build: .
+    volumes:
+      - .:/aiohttp_files_hash
+    working_dir: /aiohttp_files_hash
+    command: python -m src.app
+    ports:
+      - "8080:8080"
